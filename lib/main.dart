@@ -29,36 +29,38 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: GNav(
-          gap: 10,
-          backgroundColor: Colors.black,
-          color: Colors.white,
-          activeColor: Colors.white,
-          tabBackgroundColor: Colors.grey.shade800,
+      bottomNavigationBar: Container(
+        color: Colors.black,
+        child: const Padding(
           padding: EdgeInsets.symmetric(
-            vertical: 20,
             horizontal: 15.0,
+            vertical: 20.0,
           ),
-          tabs: [
-            GButton(
-              icon: Icons.home,
-              text: 'Home',
-            ),
-            GButton(
-              icon: Icons.favorite,
-              text: 'Likes',
-            ),
-            GButton(
-              icon: Icons.search,
-              text: 'Search',
-            ),
-            GButton(
-              icon: Icons.settings,
-              text: 'Settings',
-            ),
-          ],
+          child: GNav(
+            gap: 8,
+            backgroundColor: Colors.black,
+            color: Colors.white,
+            activeColor: Colors.white,
+            tabBackgroundColor: Color(0xFF424242),
+            tabs: <GButton>[
+              GButton(
+                icon: Icons.home,
+                text: 'Home',
+              ),
+              GButton(
+                icon: Icons.favorite,
+                text: 'Likes',
+              ),
+              GButton(
+                icon: Icons.search,
+                text: 'Search',
+              ),
+              GButton(
+                icon: Icons.settings,
+                text: 'Settings',
+              ),
+            ],
+          ),
         ),
       ),
     );
